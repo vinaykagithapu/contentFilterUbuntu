@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
+## Content Blocking Setup
+apt update -y
+apt install wget -y
+wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
+cp /etc/hosts /etc/hosts.bak
+cat hosts > /etc/hosts
+rm hosts
+sed -i 's/dns//' /etc/nsswitch.conf

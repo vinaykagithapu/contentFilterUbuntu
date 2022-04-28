@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
+## C
+cp /etc/hosts /etc/hosts.block.bak
+cat /etc/hosts.bak > /etc/hosts
