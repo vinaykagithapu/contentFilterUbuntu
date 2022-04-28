@@ -1,4 +1,4 @@
-# contentFilterUbuntu
+# Content Filter on Ubuntu
 This script is used to setup the blocking the content or content filtering. We can also unblock it
 
 ## Setup Content Filter
