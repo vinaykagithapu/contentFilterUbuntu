@@ -10,5 +10,6 @@ sudo ./setupContentFilter
 ## Unset Content Filter
 Warning: The following commands only if you run setupContentFilter otherwise you may lose the hosts file.
 ```
-chmod +x 
+chmod +x removeContentFilter
+sudo ./removeContentFilter
 ```
